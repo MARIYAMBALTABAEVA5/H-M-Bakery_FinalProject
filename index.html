@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&amp;M Bakery - Home</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assignment5.css">
+    <link rel="stylesheet" href="css/assignment6.css">
+
+    <style>
+        /* FAQ */
+        #faq-section .faq-item {
+            border-bottom: 1px solid #d9b88f;
+            padding: 18px 10px;
+        }
+
+        #faq-section .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #63320f;
+            list-style: none;
+        }
+
+        #faq-section .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        #faq-section .faq-question::after {
+            content: '+';
+            font-size: 1.4em;
+        }
+
+        #faq-section .faq-item[open] .faq-question::after {
+            content: '−';
+        }
+
+        #faq-section .faq-answer {
+            padding: 14px 8px 0;
+            line-height: 1.7;
+        }
+
+        /* Social media */
+        .a6-social-links {
+            margin: 18px 0;
+            padding: 16px 20px;
+            border: 1px solid #d9b88f;
+            border-radius: 14px;
+            background: #fffaf5;
+        }
+
+        .a6-social-links p {
+            margin-bottom: 8px;
+        }
+        #faq-section .faq-answer {
+    display: block;
+    padding: 12px 15px;
+    line-height: 1.7;
+    color: #553a2a;
+}
+
+#faq-section .faq-answer[hidden] {
+    display: none !important;
+}
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" href="css/final-polish.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header-area">
+        <nav class="navbar navbar-expand-lg navbar-dark bakery-navbar sticky-top">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <a class="navbar-brand" href="index.html" aria-label="H&amp;M Bakery home">
+                    <span class="logo-mark">H&amp;M</span>
+                    <span>H&amp;M Bakery</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav"
+                        aria-controls="mainNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <section class="side-box">
+            <h3>Opening Hours</h3>
+
+            <ul class="hours">
+                <li><span>Mon - Fri</span><span>7:30 - 20:00</span></li>
+                <li><span>Saturday</span><span>8:00 - 21:00</span></li>
+                <li><span>Sunday</span><span>8:00 - 18:00</span></li>
+            </ul>
+        </section>
+
+        <section class="side-box side-special">
+            <h3>Fresh Today</h3>
+            <p>
+                Strawberry cream croissants are baked every morning.
+                Come early - they go fast!
+            </p>
+            <a class="btn btn-light" href="products.html">See products</a>
+        </section>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- WELCOME SECTION -->
+        <section class="panel p-0 overflow-hidden">
+            <div class="container-fluid px-sm-2 px-md-4 py-4 py-lg-5">
+
+                <div class="row align-items-center g-4">
+
+                    <div class="col-lg-6">
+                        <h2 class="mb-3">Welcome to H&amp;M Bakery</h2>
+
+                        <p class="lead">
+                            H&amp;M Bakery is a cozy bakery that offers fresh bread,
+                            cakes, cookies, and pastries every day.
+                        </p>
+
+                        <div class="btn-group mt-lg-4 mt-3"
+                             role="group"
+                             aria-label="Home page calls to action">
+
+                            <a class="btn btn-primary btn-lg" href="menu.html">
+                                See our menu
+                            </a>
+
+                            <a class="btn btn-outline-primary btn-lg" href="contact.html">
+                                Visit us
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img class="rounded-4 w-100"
+                             style="height:320px; object-fit:cover;"
+                             src="images/bakery-display.jpg"
+                             alt="Display cabinet full of cakes inside H&amp;M Bakery">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="panel">
+            <h2>Why Choose Us?</h2>
+
+            <ul class="features">
+                <li><span class="dot">&#10003;</span> Fresh ingredients</li>
+                <li><span class="dot">&#10003;</span> Homemade recipes</li>
+                <li><span class="dot">&#10003;</span> Friendly service</li>
+                <li><span class="dot">&#10003;</span> Affordable prices</li>
+            </ul>
+        </section>
+
+        <!-- CUSTOMER FAVORITES -->
+        <section class="panel">
+            <h2 class="mb-4">Customer Favorites</h2>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="card bs-card h-100">
+                        <img src="images/chocolate-cake.jpg"
+                             class="card-img-top"
+                             alt="Slice of layered chocolate cake">
+
+                        <div class="card-body d-flex flex-column">
+                            <span class="bs-price mb-2">$15</span>
+                            <h3 class="card-title h5">Chocolate Cake</h3>
+                            <p class="card-text flex-grow-1">
+                                Rich layers of chocolate sponge and cream,
+                                finished with chocolate shavings.
+                            </p>
+                            <a class="btn btn-primary mt-2" href="products.html">
+                                View products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card bs-card h-100">
+                        <img src="images/croissant.jpg"
+                             class="card-img-top"
+                             alt="Croissant filled with cream and strawberries">
+
+                        <div class="card-body d-flex flex-column">
+                            <span class="bs-price mb-2">$6</span>
+                            <h3 class="card-title h5">Strawberry Croissant</h3>
+                            <p class="card-text flex-grow-1">
+                                A flaky, buttery croissant filled with
+                                sweet cream and fresh strawberries.
+                            </p>
+                            <a class="btn btn-primary mt-2" href="products.html">
+                                View products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card bs-card h-100">
+                        <img src="images/latte.jpg"
+                             class="card-img-top"
+                             alt="Latte with heart-shaped foam art">
+
+                        <div class="card-body d-flex flex-column">
+                            <span class="bs-price mb-2">Hot drink</span>
+                            <h3 class="card-title h5">Signature Latte</h3>
+                            <p class="card-text flex-grow-1">
+                                Smooth espresso with steamed milk -
+                                the perfect partner for any pastry.
+                            </p>
+                            <a class="btn btn-primary mt-2" href="menu.html">
+                                View menu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+<section class="panel js-feature faq-accordion" id="faq-section">
+
+    <h2>Frequently Asked Questions</h2>
+    <p>Click a question to see the answer.</p>
+
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+                Do you make custom cakes?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    Yes! We make custom cakes for birthdays,
+                    weddings and special occasions. Contact us
+                    to discuss your preferred flavor, size and design.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+                Can I order pastries in advance?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    Yes! You can place an order in advance.
+                    We recommend contacting us at least one day
+                    before your preferred pickup date.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+                Where is H&amp;M Bakery located?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer" hidden>
+                <p>
+                    H&amp;M Bakery is located at 12 Baker Street,
+                    Astana, Kazakhstan. Visit us to enjoy fresh
+                    cakes, pastries and drinks!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- INTERACTIVE FEATURES -->
+        <section class="panel js-feature">
+
+            <h2>Try Our Interactive Features</h2>
+
+            <p>
+                These features use JavaScript to update the page without reloading.
+            </p>
+
+            <div class="feature-actions">
+                <button type="button"
+                        class="btn btn-primary"
+                        id="change-color">
+                    Change Background Color
+                </button>
+
+                <button type="button"
+                        class="btn btn-outline-primary"
+                        id="open-subscribe">
+                    Subscribe to Updates
+                </button>
+            </div>
+
+            <p class="mt-3 mb-0">
+                Current date and time:
+                <strong id="live-clock" role="timer">Loading...</strong>
+            </p>
+
+        </section>
+
+        <!-- ASSIGNMENT 5 -->
+        <section class="a5-panel"
+                 id="assignment5"
+                 aria-label="Assignment 5 interactive bakery features">
+
+            <h2>Explore H&amp;M Bakery — Interactive Features</h2>
+            <p>Try our JavaScript-powered bakery experience!</p>
+
+            <div class="a5-actions">
+
+                <button class="a5-btn" id="a5-theme" type="button">
+                    Dark Mode
+                </button>
+
+                <!-- The live clock above already shows the current time. -->
+                <button class="a5-btn" id="a5-time" type="button"
+                        hidden aria-hidden="true" tabindex="-1">
+                    Show Current Time
+                </button>
+
+                <span id="a5-clock" aria-live="polite" hidden></span>
+            </div>
+
+            <h3>Find your favorite treat</h3>
+
+            <div class="a5-actions" aria-label="Product categories">
+
+                <button class="a5-btn a5-filter"
+                        type="button"
+                        data-category="all"
+                        aria-pressed="true">All</button>
+
+                <button class="a5-btn a5-filter"
+                        type="button"
+                        data-category="cakes"
+                        aria-pressed="false">Cakes</button>
+
+                <button class="a5-btn a5-filter"
+                        type="button"
+                        data-category="pastries"
+                        aria-pressed="false">Pastries</button>
+
+                <button class="a5-btn a5-filter"
+                        type="button"
+                        data-category="drinks"
+                        aria-pressed="false">Drinks</button>
+
+            </div>
+
+            <div class="a5-grid" id="a5-products"></div>
+
+            <p id="a5-cart" aria-live="polite">
+                Cart: 0 items · 0 ₸
+            </p>
+
+            <h3>Rate our bakery</h3>
+
+            <div aria-label="Rating out of five stars">
+                <button type="button" class="a5-star"
+                        aria-label="1 star" aria-pressed="false">★</button>
+                <button type="button" class="a5-star"
+                        aria-label="2 stars" aria-pressed="false">★</button>
+                <button type="button" class="a5-star"
+                        aria-label="3 stars" aria-pressed="false">★</button>
+                <button type="button" class="a5-star"
+                        aria-label="4 stars" aria-pressed="false">★</button>
+                <button type="button" class="a5-star"
+                        aria-label="5 stars" aria-pressed="false">★</button>
+            </div>
+
+            <p id="a5-rating" aria-live="polite">Choose your rating</p>
+
+            <h3>Our story</h3>
+            <p>We bake fresh desserts with care every day.</p>
+
+            <button class="a5-btn" id="a5-more" type="button">
+                Read More
+            </button>
+
+            <p id="a5-extra" class="a5-extra" hidden>
+                Our bakery specializes in cakes, pastries and delicious drinks.
+                Every visit should feel warm and welcoming.
+            </p>
+
+            <h3>Bakery Request — Two-Step Demo</h3>
+
+            <p id="a5-step-status"></p>
+
+            <div class="a5-step">
+                <label for="a5-name">Your name</label>
+                <input id="a5-name" autocomplete="name">
+
+                <label for="a5-email">Your email</label>
+                <input id="a5-email" type="text" inputmode="email" autocomplete="email">
+
+                <div class="a5-actions">
+                    <button class="a5-btn" id="a5-next" type="button">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            <div class="a5-step" hidden>
+                <label for="a5-request">What would you like to order?</label>
+                <input id="a5-request">
+
+                <div class="a5-actions">
+                    <button class="a5-btn" id="a5-back" type="button">
+                        Back
+                    </button>
+
+                    <button class="a5-btn" id="a5-finish" type="button">
+                        Check Request
+                    </button>
+                </div>
+            </div>
+
+            <p class="a5-feedback"
+               id="a5-feedback"
+               role="status"
+               aria-live="polite"></p>
+
+        </section>
+
+        <!-- ASSIGNMENT 6 -->
+        <div id="a6-progress" aria-hidden="true"></div>
+
+        <section class="a6-panel" id="assignment6">
+
+            <h2>Find your bakery favorites — jQuery Search</h2>
+
+            <p>Search our treats and discover something delicious.</p>
+
+            <div class="a6-search-wrap">
+                <label for="a6-search">Search products</label>
+
+                <input id="a6-search"
+                       type="search"
+                       autocomplete="off"
+                       placeholder="Try cake, latte or croissant..."
+                       aria-controls="a6-suggestions">
+
+                <ul id="a6-suggestions"
+                    class="a6-suggestions"
+                    hidden></ul>
+            </div>
+
+            <p id="a6-count" aria-live="polite"></p>
+
+            <div id="a6-results" class="a6-results"></div>
+
+            <h3>Bakery highlights</h3>
+
+            <div class="a6-stats">
+                <div>
+                    <strong class="a6-counter" data-target="10">0</strong>
+                    <span>Delicious treats</span>
+                </div>
+
+                <div>
+                    <strong class="a6-counter" data-target="250">0</strong>
+                    <span>Happy customers</span>
+                </div>
+
+                <div>
+                    <strong class="a6-counter" data-target="5">0</strong>
+                    <span>Star experience</span>
+                </div>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <h3>Follow H&amp;M Bakery!</h3>
+
+            <p>
+                Stay connected with us for new desserts, special offers
+                and sweet moments from our bakery.
+            </p>
+
+            <div class="a6-social-links">
+                <p><strong>Instagram:</strong> @hm_bakery_astana</p>
+                <p><strong>Telegram:</strong> @hm_bakery_astana</p>
+                <p><strong>TikTok:</strong> @hm_bakery_astana</p>
+
+                <p class="small text-muted">
+                    Social media handles are sample project accounts.
+                </p>
+            </div>
+
+            <p>Copy our social media details and share them with a friend.</p>
+
+            <div class="a6-copy-row">
+                <input id="a6-copy-text"
+                       readonly
+                       value="Follow H&amp;M Bakery! Instagram: @hm_bakery_astana | Telegram: @hm_bakery_astana | TikTok: @hm_bakery_astana">
+
+                <button type="button"
+                        class="a6-button"
+                        id="a6-copy">Copy</button>
+
+                <span id="a6-copy-status"
+                      class="a6-tooltip"
+                      role="status"
+                      aria-live="polite"></span>
+            </div>
+
+            <!-- LAZY LOADING GALLERY -->
+            <h3>Our fresh bakery gallery</h3>
+
+            <div class="a6-gallery">
+                <img class="a6-lazy"
+                     data-src="images/chocolate-cake.jpg"
+                     alt="Chocolate cake">
+
+                <img class="a6-lazy"
+                     data-src="images/croissant.jpg"
+                     alt="Fresh croissant">
+
+                <img class="a6-lazy"
+                     data-src="images/latte.jpg"
+                     alt="Fresh latte">
+            </div>
+
+            <!-- MESSAGE FORM -->
+            <h3>Send us a quick message</h3>
+
+            <form id="a6-form" novalidate>
+                <label for="a6-name">Your name</label>
+                <input id="a6-name"
+                       placeholder="Your name">
+
+                <label for="a6-message">Your message</label>
+                <textarea id="a6-message"
+                          placeholder="What would you like to try?"></textarea>
+
+                <button class="a6-button"
+                        id="a6-submit"
+                        type="submit">Submit</button>
+
+                <p id="a6-form-feedback" role="status"></p>
+            </form>
+
+            <p class="a6-note">
+                Demo form only — no information is sent to a server.
+            </p>
+
+        </section>
+
+        <div id="a6-toast" role="status" aria-live="polite"></div>
+
+        <!-- EXTERNAL API: DESSERT RECIPES -->
+        <section class="panel api-recipes-section mt-4"
+                 id="api-recipes">
+
+            <div class="mb-4">
+                <h2>Discover Delicious Desserts</h2>
+
+                <p>
+                    Explore dessert ideas and recipes from around the world.
+                </p>
+
+                <span class="badge text-bg-warning">
+                    Powered by TheMealDB API
+                </span>
+            </div>
+
+            <!-- Loading and Error Messages -->
+            <div id="recipes-status"
+                 class="api-status"
+                 role="status"
+                 aria-live="polite">
+                Loading delicious recipes...
+            </div>
+
+            <!-- Recipes Grid -->
+            <div id="recipes-grid"
+                 class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            </div>
+
+            <!-- Retry Button -->
+            <div class="text-center mt-4">
+                <button type="button"
+                        id="retry-recipes"
+                        class="btn btn-primary"
+                        hidden>
+                    Try Again
+                </button>
+            </div>
+
+            <p class="text-muted small mt-4 mb-0">
+                Recipe data provided by
+                <a href="https://www.themealdb.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">TheMealDB</a>.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div>
+            <p><strong>Team H&amp;M Bakery</strong></p>
+            <p>Members: Mariyam &amp; Hadiya</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+
+</div>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SUBSCRIPTION MODAL -->
+<div class="bakery-modal"
+     id="subscribe-modal"
+     hidden>
+
+    <div class="bakery-modal-dialog"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="subscribe-title">
+
+        <button class="bakery-modal-close"
+                type="button"
+                id="close-subscribe"
+                aria-label="Close subscription form">
+            &times;
+        </button>
+
+        <h2 id="subscribe-title">Subscribe to H&amp;M Bakery</h2>
+
+        <p>Get updates about our cakes and pastries.</p>
+
+        <form id="subscribe-form" novalidate>
+
+            <label for="subscribe-email" class="form-label">
+                Email address
+            </label>
+
+            <input id="subscribe-email"
+                   class="form-control"
+                   type="text" inputmode="email"
+                   autocomplete="email"
+                   placeholder="you@example.com">
+
+            <p id="subscribe-feedback"
+               class="form-feedback"
+               aria-live="polite"></p>
+
+            <button type="submit" class="btn btn-primary">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<!-- PROJECT JAVASCRIPT FILES -->
+<script src="js/script.js" defer></script>
+<script src="js/assignment5.js" defer></script>
+<script src="js/assignment6.js" defer></script>
+
+<!-- SHOPPING CART -->
+<aside id="a5-cart-drawer"
+       class="a5-cart-drawer"
+       hidden
+       aria-label="Shopping cart"
+       role="dialog"
+       aria-modal="false">
+
+    <div class="a5-cart-head">
+        <h2>Your Cart</h2>
+
+        <button type="button"
+                class="a5-btn"
+                id="a5-cart-close"
+                aria-label="Close cart">
+            ✕
+        </button>
+    </div>
+
+    <div id="a5-cart-lines" aria-live="polite"></div>
+
+    <p id="a5-cart-total" class="a5-cart-total"></p>
+
+    <button type="button"
+            class="a5-btn"
+            id="a5-cart-clear">
+        Clear cart
+    </button>
+
+    <p class="a5-cart-note">
+        Demo cart only — no payment or real order is placed.
+    </p>
+
+</aside>
+
+<!-- FLOATING CART BUTTON -->
+<button type="button"
+        id="a5-cart-toggle"
+        class="a5-cart-floating"
+        aria-controls="a5-cart-drawer"
+        aria-expanded="false">
+
+    🛒 Cart <span id="a5-cart-count">0</span>
+
+</button>
+
+<!-- TOAST NOTIFICATION -->
+<div id="a5-toast"
+     class="a5-toast"
+     role="status"
+     aria-live="polite"></div>
+
+<!-- UI EFFECTS / RIPPLE EFFECT -->
+<script src="js/ui-effects.js" defer></script>
+
+<!-- EXTERNAL API -->
+<script src="js/recipes-api.js" defer></script>
+
+</body>
+</html>
+
+
+
+

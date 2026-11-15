@@ -1,0 +1,437 @@
+
+/* ==========================================
+   ASSIGNMENT 6 - MAIN STYLES
+========================================== */
+
+/* Reading Progress Bar */
+#a6-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    z-index: 9999;
+    background: linear-gradient(90deg, #e5a64b, #ae5724, #f5d18d);
+    box-shadow: 0 1px 8px #b97451;
+}
+
+/* Main Panels */
+.a6-panel {
+    background: #fffaf3;
+    border: 1px solid #e9d8c5;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 24px 0;
+    color: #51311f;
+}
+
+.a6-panel h2,
+.a6-panel h3 {
+    color: #8a451d;
+    margin-top: 22px;
+}
+
+.a6-panel label {
+    display: block;
+    font-weight: 600;
+    margin: 12px 0 5px;
+}
+
+.a6-panel input,
+.a6-panel textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d8bba5;
+    border-radius: 8px;
+    background: #fff;
+    color: #352418;
+}
+
+/* Search */
+.a6-search-wrap {
+    position: relative;
+}
+
+.a6-suggestions {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #d9c4ad;
+    border-radius: 8px;
+    box-shadow: 0 10px 22px #0002;
+    max-height: 240px;
+    overflow: auto;
+}
+
+.a6-suggestions button {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: white;
+    padding: 10px 14px;
+    color: #51311f;
+}
+
+.a6-suggestions button:hover,
+.a6-suggestions button:focus {
+    background: #fbe8d0;
+}
+
+/* Results */
+.a6-results,
+.a6-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin: 16px 0;
+}
+
+.a6-item {
+    background: white;
+    border: 1px solid #e4cfb7;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.a6-item img,
+.a6-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.a6-item h4 {
+    margin: 8px 0;
+}
+
+.a6-item mark {
+    background: #ffe18b;
+    padding: 0 2px;
+}
+
+/* Statistics */
+.a6-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.a6-stats > div {
+    text-align: center;
+    background: #f7e8d4;
+    border-radius: 12px;
+    padding: 15px 5px;
+}
+
+.a6-stats strong {
+    display: block;
+    font-size: clamp(24px, 4vw, 42px);
+    color: #a44f19;
+}
+
+.a6-stats span {
+    font-size: 13px;
+}
+
+/* Copy Button */
+.a6-copy-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.a6-copy-row input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.a6-button {
+    background: #934615;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+}
+
+.a6-button:disabled {
+    opacity: .65;
+    cursor: wait;
+}
+
+/* Gallery Loading */
+.a6-gallery img {
+    background: #f0e0cd;
+    min-height: 150px;
+    opacity: .3;
+    transition: opacity .45s;
+}
+
+.a6-gallery img.a6-loaded {
+    opacity: 1;
+}
+
+/* Toast Message */
+#a6-toast {
+    position: fixed;
+    right: 20px;
+    bottom: 85px;
+    z-index: 9999;
+    background: #4b2d1d;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px #0004;
+    display: none;
+}
+
+.a6-note {
+    font-size: 13px;
+    color: #795a48;
+}
+
+/* Spinner */
+.a6-spinner {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: -3px;
+    border: 2px solid rgba(255,255,255,.45);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: a6-spin .7s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes a6-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Copy Tooltip */
+.a6-tooltip {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 9px);
+    background: #332218;
+    color: white;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 12px;
+    box-shadow: 0 3px 10px #0003;
+    white-space: nowrap;
+}
+
+.a6-tooltip-visible {
+    display: block;
+}
+
+/* ==========================================
+   FAQ ACCORDION - ASSIGNMENT 4 STYLE
+========================================== */
+
+#faq-section.faq-accordion {
+    background: #ffffff;
+    border: 2px solid #d9b58d;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+    color: #352418;
+}
+
+#faq-section h2 {
+    color: #91430f;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+#faq-section > p {
+    margin-bottom: 20px;
+}
+
+#faq-section .faq-list {
+    width: 100%;
+}
+
+#faq-section .faq-item {
+    border-bottom: 1px solid #e2cbb5;
+}
+
+/* FAQ Questions */
+#faq-section .faq-toggle {
+    width: 100%;
+    padding: 20px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #63320f;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: color .2s, background .2s;
+}
+
+#faq-section .faq-toggle:hover {
+    color: #a05216;
+    background: #fff8ef;
+}
+
+#faq-section .faq-toggle:focus-visible {
+    outline: 3px solid #e3a451;
+    outline-offset: 3px;
+}
+
+/* Plus and Minus Icons */
+#faq-section .faq-toggle span {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #91430f;
+}
+
+/* FAQ Answers - Hidden by Default */
+#faq-section .faq-answer[hidden] {
+    display: none !important;
+}
+
+/* FAQ Answers - Visible When Opened */
+#faq-section .faq-answer:not([hidden]) {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 5px 8px 20px !important;
+    color: #51311f;
+    line-height: 1.7;
+    animation: faq-appear .25s ease;
+}
+
+#faq-section .faq-answer p {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.7;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* FAQ Animation */
+@keyframes faq-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.a6-button:focus-visible,
+.a6-suggestions button:focus-visible {
+    outline: 3px solid #e3a451;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 600px) {
+
+    .a6-panel {
+        padding: 14px;
+    }
+
+    .a6-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .a6-stats span {
+        font-size: 11px;
+    }
+
+    #faq-section.faq-accordion {
+        padding: 15px;
+    }
+
+    #faq-section .faq-toggle {
+        font-size: 1rem;
+        padding: 16px 5px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .a6-spinner {
+        animation-duration: 2s;
+    }
+
+    .a6-gallery img {
+        transition: none;
+    }
+
+    #faq-section .faq-answer:not([hidden]) {
+        animation: none;
+    }
+}
+/* FAQ Accordion */
+#faq-section .faq-item {
+    border-bottom: 1px solid #d9b88f;
+    padding: 15px 10px;
+}
+
+#faq-section .faq-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    color: #63320f;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+#faq-section .faq-toggle:hover {
+    color: #a65c28;
+}
+
+#faq-section .faq-toggle span {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+#faq-section .faq-answer {
+    padding: 12px 8px;
+    line-height: 1.7;
+    color: #553a2a;
+}
+
+#faq-section .faq-answer[hidden] {
+    display: none !important;
+}
+
+#faq-section .faq-answer:not([hidden]) {
+    display: block !important;
+}

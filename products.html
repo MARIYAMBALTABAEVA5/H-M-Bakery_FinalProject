@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Bakery - Products</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/assignment5.css">
+
+    <link rel="stylesheet" href="css/final-polish.css">
+</head>
+<body>
+
+<div class="page">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header-area">
+        <nav class="navbar navbar-expand-lg navbar-dark bakery-navbar sticky-top">
+            <div class="container-fluid px-3 px-lg-4">
+
+                <a class="navbar-brand" href="index.html" aria-label="H&M Bakery home">
+                    <span class="logo-mark">H&M</span>
+                    <span>H&M Bakery</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNav"
+                        aria-controls="mainNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <section class="side-box">
+            <h3>Opening Hours</h3>
+
+            <ul class="hours">
+                <li><span>Mon - Fri</span><span>7:30 - 20:00</span></li>
+                <li><span>Saturday</span><span>8:00 - 21:00</span></li>
+                <li><span>Sunday</span><span>8:00 - 18:00</span></li>
+            </ul>
+        </section>
+
+        <section class="side-box side-special">
+            <h3>Fresh Today</h3>
+            <p>
+                Strawberry cream croissants are baked every morning.
+                Come early - they go fast!
+            </p>
+            <a class="btn btn-light" href="products.html">See products</a>
+        </section>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- PRODUCT SEARCH AND FILTER SECTION -->
+        <section class="panel">
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                <h2 class="mb-0">Our Products</h2>
+
+                <a class="btn btn-outline-primary btn-sm" href="gallery.html">
+                    See all photos
+                </a>
+            </div>
+
+
+            <!-- SEARCH AND FILTER -->
+            <div class="product-search-panel mb-4 p-3 rounded"
+                 style="background-color: #fff8f0; border: 1px solid #d9b38c;">
+
+                <h3 class="h4 mb-3">Find Your Favorite Treat</h3>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label for="product-search" class="form-label">
+                            Search Products
+                        </label>
+
+                        <input
+                            type="search"
+                            id="product-search"
+                            class="form-control"
+                            placeholder="Search cakes, cookies, croissants..."
+                            autocomplete="off">
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label for="product-category" class="form-label">
+                            Filter by Category
+                        </label>
+
+                        <select id="product-category" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="cake">Cakes</option>
+                            <option value="pastry">Pastries</option>
+                            <option value="dessert">Desserts</option>
+                            <option value="snack">Snacks</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button
+                            type="button"
+                            id="reset-product-search"
+                            class="btn btn-outline-primary w-100">
+                            Reset
+                        </button>
+                    </div>
+
+                </div>
+
+                <p id="product-results-count"
+                   class="mt-3 mb-0"
+                   aria-live="polite">
+                    Showing all 5 products
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCTS GRID -->
+            <div id="products-container"
+                 class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+
+                <!-- PRODUCT 1: CHOCOLATE CAKE -->
+                <div class="col product-item"
+                     data-name="Chocolate Cake"
+                     data-category="cake">
+
+                    <div class="card bs-card h-100">
+
+                        <img src="images/chocolate-cake.jpg"
+                             class="card-img-top"
+                             alt="Slice of layered chocolate cake">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span class="bs-price mb-2">$15</span>
+
+                            <h3 class="card-title h5">Chocolate Cake</h3>
+
+                            <p class="card-text flex-grow-1">
+                                Moist chocolate layers with silky cream
+                                and chocolate shavings.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-primary mt-2 a5-order"
+                                    data-product="Chocolate Cake">
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT 2: VANILLA CAKE -->
+                <div class="col product-item"
+                     data-name="Vanilla Cake"
+                     data-category="cake">
+
+                    <div class="card bs-card h-100">
+
+                        <img src="images/vanilla-cake.jpg"
+                             class="card-img-top"
+                             alt="Slice of vanilla cake with raspberries">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span class="bs-price mb-2">$14</span>
+
+                            <h3 class="card-title h5">Vanilla Cake</h3>
+
+                            <p class="card-text flex-grow-1">
+                                Light vanilla sponge with raspberry
+                                filling and cream roses.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-primary mt-2 a5-order"
+                                    data-product="Vanilla Cake">
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT 3: CROISSANT -->
+                <div class="col product-item"
+                     data-name="Croissant"
+                     data-category="pastry">
+
+                    <div class="card bs-card h-100">
+
+                        <img src="images/croissant.jpg"
+                             class="card-img-top"
+                             alt="Croissant filled with cream and strawberries">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span class="bs-price mb-2">$6</span>
+
+                            <h3 class="card-title h5">Croissant</h3>
+
+                            <p class="card-text flex-grow-1">
+                                Golden, flaky and filled with fresh
+                                cream and strawberries.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-primary mt-2 a5-order"
+                                    data-product="Croissant">
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT 4: DONUT -->
+                <div class="col product-item"
+                     data-name="Donut"
+                     data-category="dessert">
+
+                    <div class="card bs-card h-100">
+
+                        <img src="images/donut.jpg"
+                             class="card-img-top"
+                             alt="Assorted glazed and chocolate donuts">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span class="bs-price mb-2">$4</span>
+
+                            <h3 class="card-title h5">Donut</h3>
+
+                            <p class="card-text flex-grow-1">
+                                Soft yeast donuts with chocolate,
+                                pink glaze and crunchy toppings.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-primary mt-2 a5-order"
+                                    data-product="Donut">
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT 5: COOKIES -->
+                <div class="col product-item"
+                     data-name="Cookies"
+                     data-category="snack">
+
+                    <div class="card bs-card h-100">
+
+                        <img src="images/cookies.jpg"
+                             class="card-img-top"
+                             alt="Chocolate chip cookies on a wooden board">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <span class="bs-price mb-2">$5</span>
+
+                            <h3 class="card-title h5">Cookies</h3>
+
+                            <p class="card-text flex-grow-1">
+                                Golden chocolate chip cookies,
+                                crisp outside and chewy inside.
+                            </p>
+
+                            <button type="button"
+                                    class="btn btn-primary mt-2 a5-order"
+                                    data-product="Cookies">
+                                Add to Cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- NO RESULTS MESSAGE -->
+            <p id="no-products-message"
+               class="text-center mt-4"
+               style="display: none;"
+               role="status">
+
+                No products found. Please try another search.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div>
+            <p><strong>Team H&M Bakery</strong></p>
+            <p>Members: Mariyam &amp; Hadiya</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-interactive">
+
+            <button type="button"
+                    class="btn btn-sm btn-outline-light"
+                    id="change-color">
+                Change Background Color
+            </button>
+
+            <button type="button"
+                    class="btn btn-sm btn-outline-light"
+                    id="open-subscribe">
+                Subscribe
+            </button>
+
+            <span>
+                Current time:
+                <time id="live-clock">Loading...</time>
+            </span>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- SUBSCRIPTION MODAL -->
+<div class="bakery-modal" id="subscribe-modal" hidden>
+
+    <div class="bakery-modal-dialog"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="subscribe-title">
+
+        <button class="bakery-modal-close"
+                type="button"
+                id="close-subscribe"
+                aria-label="Close subscription form">
+            &times;
+        </button>
+
+        <h2 id="subscribe-title">Subscribe to H&M Bakery</h2>
+
+        <p>Get updates about our cakes and pastries.</p>
+
+        <form id="subscribe-form" novalidate>
+
+            <label for="subscribe-email" class="form-label">
+                Email address
+            </label>
+
+            <input id="subscribe-email"
+                   class="form-control"
+                   type="text" inputmode="email"
+                   autocomplete="email"
+                   placeholder="you@example.com">
+
+            <p id="subscribe-feedback"
+               class="form-feedback"
+               aria-live="polite"></p>
+
+            <button type="submit" class="btn btn-primary">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- PROJECT JAVASCRIPT FILES -->
+<script src="js/script.js" defer></script>
+<script src="js/assignment5.js" defer></script>
+<script src="js/product-search.js" defer></script>
+
+
+<!-- ASSIGNMENT 5: SHOPPING CART -->
+<aside id="a5-cart-drawer"
+       class="a5-cart-drawer"
+       hidden
+       aria-label="Shopping cart"
+       role="dialog"
+       aria-modal="false">
+
+    <div class="a5-cart-head">
+
+        <h2>Your Cart</h2>
+
+        <button type="button"
+                class="a5-btn"
+                id="a5-cart-close"
+                aria-label="Close cart">
+            ✕
+        </button>
+
+    </div>
+
+    <div id="a5-cart-lines" aria-live="polite"></div>
+
+    <p id="a5-cart-total" class="a5-cart-total"></p>
+
+    <button type="button"
+            class="a5-btn"
+            id="a5-cart-clear">
+        Clear cart
+    </button>
+
+    <p class="a5-cart-note">
+        Demo cart only — no payment or real order is placed.
+    </p>
+
+</aside>
+
+
+<!-- FLOATING CART BUTTON -->
+<button type="button"
+        id="a5-cart-toggle"
+        class="a5-cart-floating"
+        aria-controls="a5-cart-drawer"
+        aria-expanded="false">
+
+    🛒 Cart <span id="a5-cart-count">0</span>
+
+</button>
+
+
+<!-- TOAST NOTIFICATION -->
+<div id="a5-toast"
+     class="a5-toast"
+     role="status"
+     aria-live="polite"></div>
+
+
+<!-- UI EFFECTS / RIPPLE EFFECT -->
+<script src="js/ui-effects.js" defer></script>
+
+</body>
+</html>
+
+
+
+
